@@ -10,5 +10,6 @@
 }
 
 .live-card {
-  transform: none;
+  transform: none !important;
+  rotate: 0deg !important;
 }

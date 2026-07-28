@@ -8,3 +8,7 @@
   border-radius: 0;
   background: none;
 }
+
+.live-card {
+  transform: none;
+}

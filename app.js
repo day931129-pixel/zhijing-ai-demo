@@ -18,14 +18,14 @@ const declare = document.querySelector('#declare');
 const submit = document.querySelector('#demo-submit');
 const filename = document.querySelector('#filename');
 function syncUpload() { submit.disabled = !(file.files.length && declare.checked); }
-file.addEventListener('change', () => { filename.textContent = file.files[0]?.name || '閫夋嫨 AI 鍥剧墖鎴栬棰?; syncUpload(); });
+file.addEventListener('change', () => { filename.textContent = file.files[0]?.name || '选择 AI 图片或视频'; syncUpload(); });
 declare.addEventListener('change', syncUpload);
 submit.addEventListener('click', () => {
-  document.querySelector('#upload-message').textContent = '婕旂ず鎻愪氦鎴愬姛锛氫綔鍝佸凡杩涘叆 AI 鍐呭瀹℃牳闃熷垪銆?;
+  document.querySelector('#upload-message').textContent = '演示提交成功：作品已进入 AI 内容审核队列。';
   submit.disabled = true;
 });
 document.querySelector('#live-demo').addEventListener('click', () => {
-  document.querySelector('#live-message').textContent = '婕旂ず鐢宠宸蹭繚瀛橈細璇峰畬鎴愬垱浣滆€呰璇佸悗寮€鎾€?;
+  document.querySelector('#live-message').textContent = '演示申请已保存：请完成创作者认证后开播。';
 });
 
 document.querySelectorAll('[data-filter]').forEach((button) => button.addEventListener('click', () => {

@@ -1,0 +1,32 @@
+.brand-mark {
+  width: 34px;
+  height: 34px;
+  display: block;
+  position: relative;
+  flex: 0 0 auto;
+  border-radius: 0;
+  background: none;
+}
+
+.brand-mark::before,
+.brand-mark::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 30px;
+  height: 10px;
+  border-radius: 10px 3px 10px 3px;
+  transform-origin: center;
+  clip-path: polygon(0 0, 100% 0, 82% 50%, 100% 100%, 0 100%, 18% 50%);
+}
+
+.brand-mark::before {
+  background: linear-gradient(90deg, #8a60ff 10%, var(--acid));
+  transform: translate(-50%, -50%) rotate(-43deg);
+}
+
+.brand-mark::after {
+  background: linear-gradient(90deg, #6f4dde, #ae85ff 70%);
+  transform: translate(-50%, -50%) rotate(43deg);
+}
